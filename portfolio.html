@@ -258,7 +258,7 @@
           </div>
 
           <div class="footer-item footer-social">
-            <h3 class="footer-caption">присоединяйтесь</h3>
+            <h3 class="footer__caption">присоединяйтесь</h3>
             <ul class="list footer-social-list">
               <li class="footer-social-item">
                 <a href="" class="footer-social-link">
@@ -291,7 +291,22 @@
             </ul>
           </div>
 
-          <div class="footer-item footer-form"></div>
+          <div class="form-section">
+            <h3 class="footer__caption">Подпишитесь на рассылку</h3>
+
+            <form class="footer-form" autocomplete="on" novalidate>
+              <div class="email-form" role="group" aria-label="email-form-footer">
+                <input class="email__input" type="email" name="email" id="footer-email" placeholder="E-mail" />
+
+                <button class="button button-footer" type="submit">
+                  Подписаться
+                  <svg class="button__icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-send"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </footer>

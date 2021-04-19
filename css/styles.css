@@ -740,6 +740,11 @@ address {
   margin-left: auto;
 }
 
+.email-form {
+  display: flex;
+  justify-content: space-between;
+}
+
 .form-section {
   color: white;
   font-size: 14px;
