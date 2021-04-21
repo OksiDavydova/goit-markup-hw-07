@@ -8,11 +8,12 @@
   --bg-headline-color: rgba(47, 48, 58, 0.8);
   --backdrop-bg-color: rgba(0, 0, 0, 0.2);
   --border-color-for-modal: rgba(33, 33, 33, 0.2);
+  --modal-form__input--textarea: rgba(117, 117, 117, 0.502);
+  --footer-border-email: rgba(255, 255, 255, 0.3);
   --accent-color: #2196f3; /* акцент*/
   --bg-accent-col: #188ce8;
   --header-bottom-border: #ececec;
   --border-card-color: #eeeeee;
-  --transparent-color: #00000000;
   --base-icon-color: #afb1b8;
   --address--link-col: #acacb0;
   --footer-link-bg: #ffffff1a;
@@ -57,12 +58,7 @@ img {
 
 address {
   font-style: normal;
-  width: 231px;
-}
-
-.icon-size {
-  width: 20px;
-  height: 20px;
+  min-width: 231px;
 }
 
 /*--скрытый второй загаловок--*/
@@ -192,22 +188,24 @@ address {
   background: var(--accent-color);
 }
 
-.social__link--bg:hover,
+/* .social__link--bg:hover,
 .social__link--bg:focus {
   background: var(--accent-color);
-}
+} */
 
 .social__icon {
+  width: 20px;
+  height: 20px;
   fill: var(--base-icon-color);
   transition: var(--animation);
 }
 
-.social__link:hover .social__icon,
-.social__link:focus .social__icon {
+.social__icon--col-unchanged {
   fill: var(--white-color);
 }
 
-.social__icon--col-unchanged {
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
   fill: var(--white-color);
 }
 
@@ -342,6 +340,11 @@ address {
   color: var(--text-title-color);
 }
 
+.footer--logo {
+  margin-bottom: 20px;
+  --text-title-color: var(--white-color);
+}
+
 .logo__part {
   color: var(--accent-color);
 }
@@ -375,7 +378,7 @@ address {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-/*--заголовки второго уровня--*/
+/*--заголовки -*/
 .section__title {
   margin-top: 0px;
   margin-bottom: 50px;
@@ -384,6 +387,18 @@ address {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+
+.heading {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.heading__footer {
+  margin-bottom: 20px;
 }
 /*-------кнопка "Заказать услугу"------*/
 .button {
@@ -410,17 +425,31 @@ address {
   background-color: var(--bg-accent-col);
 }
 
-/*--кнопки-фильтры со страницы "portfolio"--*/
-.section .filter {
-  margin-bottom: 50px;
+.button__footer {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 28px 10px 29px;
+  border: 1px solid var(--accent-color);
 }
 
+.button__icon {
+  fill: currentColor;
+  margin-left: 10px;
+}
+
+.button__form {
+  display: block;
+  margin: auto;
+}
+/*--кнопки-фильтры со страницы "portfolio"--*/
 .filter {
   display: flex;
   justify-content: center;
   margin: auto;
 
   min-width: 611px;
+  margin-bottom: 50px;
 }
 
 .filter__item {
@@ -442,7 +471,7 @@ address {
   cursor: pointer;
   padding: 6px 22px;
   border-radius: 4px;
-  box-shadow: var(--transparent-color);
+  box-shadow: transparent;
 
   transition: color var(--animation), background-color var(--animation), box-shadow var(--animation);
 }
@@ -528,15 +557,6 @@ address {
 }
 
 /* ------------ особенности --------------*/
-
-.skills__title {
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-}
-
 .skills__text {
   font-size: 14px;
   line-height: 1.71;
@@ -662,6 +682,7 @@ address {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  font-style: normal;
   background-color: var(--bg-accent-color);
   color: var(--white-color);
 }
@@ -676,34 +697,24 @@ address {
   flex-basis: calc((50%) / 2);
 }
 
-.footer--logo {
-  margin-bottom: 20px;
-
-  --text-title-color: var(--white-color);
-}
-
 .footer-address {
   display: flex;
   flex-direction: column;
   margin-right: 30px;
 }
 
-.address--link {
-  display: block;
+.contacts__link--address {
+  flex-direction: column;
+  align-items: flex-start;
   letter-spacing: 0.03em;
+  padding: 0;
   color: var(--address--link-col);
-
-  transition: color var(--animation);
 }
 
-.address--link:not(:last-child) {
+.contacts__link--address:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.address--link:hover,
-.address--link:focus {
-  color: var(--accent-color);
-}
 /*--------------------------------------------*/
 
 .footer-social {
@@ -711,57 +722,28 @@ address {
   flex-direction: column;
 
   margin-top: 12px;
-  margin-bottom: 40px;
 }
-
-.footer-block__title {
-  margin-bottom: 20px;
-
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-}
-
 /*--------------------------------*/
 
 .form-section {
   flex-basis: calc(100% - 50%);
   margin-top: 12px;
-  /* margin-left: auto; */
-}
-
-.email-form {
-  display: flex;
-  justify-content: space-between;
-}
-
-.form-section {
-  color: white;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  line-height: 1.14;
-  font-style: normal;
 }
 
 .email__input {
   color: currentColor;
-  background-color: var(--transparent-color);
+  background-color: transparent;
   padding: 15px 16px;
 
   border-width: 1px;
   border-style: solid;
-  border-color: rgba(255, 255, 255, 0.3);
-  outline-color: rgba(255, 255, 255, 0.3);
+  border-color: var(--footer-border-email);
+  outline-color: var(--footer-border-email);
   border-radius: 4px;
 
-  width: 358px;
+  min-width: 358px;
   font-size: 16px;
-  font-weight: 400;
   line-height: 1.25;
-  letter-spacing: 0.03em;
-
   transition: border-color var(--animation), outline-color var(--animation);
 }
 
@@ -772,21 +754,7 @@ address {
 }
 
 .email__input::placeholder {
-  color: #acacb0;
-}
-
-.footer--button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 28px 10px 29px;
-
-  border: 1px solid var(--accent-color);
-}
-
-.button__icon {
-  fill: currentColor;
-  margin-left: 10px;
+  color: var(--address--link-col);
 }
 
 /*================modal-button__close==================*/
@@ -851,9 +819,6 @@ address {
   top: 50%;
   left: 50%;
 
-  /* min-height: 528px;
-    min-width: 581px;*/
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -886,11 +851,11 @@ address {
   width: 100%;
 }
 
-.modal-form-container .group + .group {
+.element + .element {
   margin-top: 10px;
 }
 /*------------form-heading-------------------*/
-.modal .form-heading {
+.form-heading {
   text-align: center;
   margin-bottom: 12px;
   font-weight: 700;
@@ -898,7 +863,7 @@ address {
   line-height: 1.15;
 }
 
-.modal-form .label {
+.modal-form__label {
   margin-bottom: 4px;
   font-style: normal;
   font-weight: 400;
@@ -918,7 +883,6 @@ address {
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
   line-height: 1.14;
   color: var(--black-color);
   letter-spacing: 0.01em;
@@ -930,8 +894,17 @@ address {
   border-color: var(--border-color-for-modal);
   transition: border-color var(--animation);
 }
+/*------------textarea------------------*/
+.modal-form__input--textarea {
+  padding: 11px 15px;
+  resize: none;
+  overflow: hidden;
+}
 
-/* .modal-form .input:hover, */
+.modal-form__input--textarea::placeholder {
+  color: var(--modal-form__input--textarea);
+}
+
 .modal-form__input:focus {
   border-color: var(--accent-color);
 }
@@ -942,44 +915,26 @@ address {
 
 .modal-form__icon {
   position: absolute;
+  width: 18px;
+  height: 18px;
   top: 50%;
   left: 11px;
   transform: translateY(-50%);
   transition: fill var(--animation);
-
-  width: 18px;
-  height: 18px;
 }
 
-/* .modal-form .input:hover + .icon, */
 .modal-form__input:focus + .modal-form__icon {
   fill: var(--accent-color);
 }
-
-/*------------textarea------------------*/
-.textarea {
-  padding: 11px 15px;
-  resize: none;
-  overflow: hidden;
-}
-
-.textarea::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-
 /*---------------checkbox---------------*/
 .checkbox {
-  text-align: center;
   margin-top: 20px;
   margin-bottom: 30px;
-
+  text-align: center;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
-
-  letter-spacing: 0.03em;
-
   color: var(--text-primery-color);
 }
 
@@ -992,19 +947,22 @@ address {
 
 .checkbox__icon {
   position: absolute;
-
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-
   border-width: 2px;
   border-style: solid;
   border-color: var(--bg-accent-color);
   background-color: transparent;
   border-radius: 2px;
   fill: none;
-
   transition: fill var(--animation), background-color var(--animation), border-color var(--animation);
+}
+
+.checkbox_input:hover + .checkbox__icon,
+.checkbox_input:focus + .checkbox__icon {
+  border-color: var(--accent-color);
+  outline-color: var(--accent-color);
 }
 
 .checkbox_input:checked + .checkbox__icon {
@@ -1014,51 +972,8 @@ address {
   outline-color: var(--accent-color);
 }
 
-.checkbox_input:hover + .checkbox__icon,
-.checkbox_input:focus + .checkbox__icon {
-  border-color: var(--accent-color);
-  outline-color: var(--accent-color);
-}
-
-/* .modal-form .check-icon {
-  position: absolute;
-  display: inline-block;
-
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 15px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: var(--bg-accent-color);
-  border-radius: 2px;
-  background-image: none;
-  background-color: transparent;
-  transition: border-color var(--animation), background-image var(--animation), background-color var(--animation);
-}
-
-.modal-form .checkbox:checked + .check-icon {
-  border-color: transparent;
-  background-color: var(--accent-color);
-  background-image: url(../images/icon/check.svg);
-  background-size: contain;
-  background-origin: border-box;
-  border: none;
-}
-
-.modal-form .checkbox:focus + .check-icon,
-.modal-form .checkbox:hover ~ .check-icon {
-  border: 2px solid var(--accent-color);
-} */
-
 .checkbox__link {
   display: inline-block;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-
-  letter-spacing: 0.03em;
   margin-left: 2px;
   color: var(--accent-color);
   text-decoration: underline;
@@ -1069,9 +984,4 @@ address {
 .checkbox__link:focus {
   color: var(--bg-accent-col);
   outline-color: currentColor;
-}
-
-.button--form {
-  display: block;
-  margin: auto;
 }
