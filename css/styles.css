@@ -128,6 +128,12 @@ address {
 .flexbox__item:nth-child(4n) {
   margin-right: 0px;
 }
+
+.flexbox__item--team {
+  box-shadow: var(--box-shadow);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--white-color);
+}
 /*--сетка на 4 елем.--*/
 .grid__item {
   flex-basis: calc((100% - 60px) / 3);
@@ -263,6 +269,17 @@ address {
   fill: var(--accent-color);
 }
 
+.contacts__link--footer {
+  align-items: flex-start;
+  letter-spacing: 0.03em;
+  padding: 0;
+  color: var(--address--link-col);
+}
+
+.contacts__link--footer:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .navigation {
   margin-left: 93px;
 }
@@ -309,7 +326,6 @@ address {
 
 .menu__link--current {
   color: var(--accent-color);
-
   transition: color var(--animation);
 }
 
@@ -551,10 +567,10 @@ address {
 .product__link:focus .product__overlay {
   transform: translateY(0);
 }
-
+/* 
 .product__text {
   margin-bottom: 0;
-}
+} */
 
 /* ------------ особенности --------------*/
 .skills__text {
@@ -601,12 +617,6 @@ address {
 }
 
 /*----------------Наша команда------------------*/
-
-.team--item {
-  box-shadow: var(--box-shadow);
-  border-radius: 0px 0px 4px 4px;
-  background-color: var(--white-color);
-}
 
 .team__meta {
   font-weight: 400;
@@ -687,47 +697,32 @@ address {
   color: var(--white-color);
 }
 
-.container--footer,
-.footer-block {
+.container-footer {
   display: flex;
   justify-content: space-between;
 }
 
-.footer-block__part {
-  flex-basis: calc((50%) / 2);
-}
-
-.footer-address {
+.footer__part {
   display: flex;
   flex-direction: column;
+}
+
+.footer__part:last-child {
+  width: calc(100% / 2);
+  margin-left: auto;
+}
+
+.footer__part--margin-top {
+  margin-top: 12px;
+}
+
+.footer__part--margin-right {
   margin-right: 30px;
 }
 
-.contacts__link--address {
-  flex-direction: column;
-  align-items: flex-start;
-  letter-spacing: 0.03em;
-  padding: 0;
-  color: var(--address--link-col);
-}
-
-.contacts__link--address:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-/*--------------------------------------------*/
-
-.footer-social {
+.email-form {
   display: flex;
-  flex-direction: column;
-
-  margin-top: 12px;
-}
-/*--------------------------------*/
-
-.form-section {
-  flex-basis: calc(100% - 50%);
-  margin-top: 12px;
+  justify-content: space-between;
 }
 
 .email__input {
