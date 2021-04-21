@@ -1,0 +1,19 @@
+.container {
+  width: $container-width;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &__bg {
+    background-color: $headline-color-text;
+  }
+
+  &--padding-bottom {
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,184 @@
+.header {
+  border-bottom: 1px solid $header-bottom-border;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  margin-left: 93px;
+}
+
+.contacts {
+  display: flex;
+  margin-left: auto;
+
+  &__item + &__item {
+    margin-left: 50px;
+  }
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $text-primery-color;
+  transition: color $animation;
+
+  &--footer {
+    align-items: flex-start;
+    letter-spacing: 0.03em;
+    padding: 0;
+    color: $address--link-col;
+  }
+
+  &--footer:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.contact__icon {
+  fill: currentColor;
+  margin-right: 10px;
+  transition: fill $animation;
+
+  .contacts__link:hover &,
+  .contacts__link:focus & {
+    fill: $accent-color;
+  }
+}
+
+.menu {
+  display: flex;
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.menu__link {
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $text-title-color;
+  transition: color $animation;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    bottom: -1px;
+    background-color: transparent;
+
+    transition: background-color $animation;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: $accent-color;
+  }
+
+  &--current {
+    color: $accent-color;
+    transition: color $animation;
+  }
+
+  &--current:hover,
+  &--current:focus {
+    color: $bg-accent-col;
+  }
+
+  &--current::after {
+    content: "";
+    background-color: $accent-color;
+    bottom: -1px;
+  }
+
+  &--current:hover::after,
+  &--current:focus::after {
+    color: $bg-accent-col;
+  }
+}
+
+.logo {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+  color: $text-title-color;
+
+  &__footer {
+    margin-bottom: 20px;
+    color: $white-color;
+  }
+
+  &__part {
+    color: $accent-color;
+  }
+}
+
+/*-------кнопка "Заказать услугу"------*/
+.button {
+  margin: 0px;
+  border-width: 0px;
+  min-width: 200px;
+  padding: 10px 32px;
+  border-radius: 4px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.89;
+  letter-spacing: 0.06em;
+  color: $white-color;
+  background-color: $accent-color;
+  cursor: pointer;
+
+  transition: background-color $animation;
+
+  &:hover,
+  &:focus {
+    background-color: $bg-accent-col;
+  }
+
+  &__footer {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 28px 10px 29px;
+    border: 1px solid $accent-color;
+  }
+
+  &__icon {
+    fill: currentColor;
+    margin-left: 10px;
+  }
+
+  &__form {
+    display: block;
+    margin: auto;
+  }
+}

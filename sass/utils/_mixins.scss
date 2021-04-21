@@ -1,0 +1,10 @@
+@mixin flex-wrap($type) {
+  display: $type;
+  flex-wrap: wrap;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
