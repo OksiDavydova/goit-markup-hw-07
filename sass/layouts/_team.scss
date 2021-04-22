@@ -21,4 +21,10 @@
     margin-bottom: 16px;
     color: var(--text-primery-color);
   }
+
+  &__item-border {
+    box-shadow: var(--box-shadow);
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--white-color);
+  }
 }

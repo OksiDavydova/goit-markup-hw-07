@@ -567,7 +567,7 @@ address {
   flex-wrap: wrap;
 }
 
-/*--сетка на 3 елем.--*/
+/*--сетка на 4 елем.--*/
 .flexbox__item {
   width: calc((100% - (3 * 30px)) / 4);
   margin-bottom: 0px;
@@ -578,13 +578,7 @@ address {
   margin-right: 0px;
 }
 
-.flexbox__item--border {
-  box-shadow: var(--box-shadow);
-  border-radius: 0px 0px 4px 4px;
-  background-color: var(--white-color);
-}
-
-/*--сетка на 4 елем.--*/
+/*--сетка на 3 елем.--*/
 .grid__item {
   flex-basis: calc((100% - 60px) / 3);
   margin-right: 30px;
@@ -721,6 +715,12 @@ address {
 .team__position {
   margin-bottom: 16px;
   color: var(--text-primery-color);
+}
+
+.team__item-border {
+  box-shadow: var(--box-shadow);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--white-color);
 }
 
 .clients__item {
