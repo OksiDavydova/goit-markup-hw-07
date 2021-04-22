@@ -1,12 +1,27 @@
+@import "./vendors.scss/visually-hidden";
 @import "./utils/variables";
-@import "./components/basic-styles";
-@import "./utils/visually-hidden";
-@import "./components/container";
 @import "./utils/mixins";
-@import "./components/flex-global";
-@import "./components/social-icon";
+
+@import "./base/common";
+@import "./base/container";
+
 @import "./components/header";
-@import "./components/hero";
-@import "./components/section";
-@import "./components/footer";
-@import "./components/portfolio-section";
+@import "./components/logo";
+@import "./components/menu";
+@import "./components/contacts";
+@import "./components/button";
+@import "./components/backdrop";
+@import "./components/modal-button";
+@import "./components/forma";
+@import "./components/social-icon";
+
+@import "./layouts/calc-item";
+@import "./layouts/section";
+@import "./layouts/hero";
+@import "./layouts/competence";
+@import "./layouts/work";
+@import "./layouts/team";
+@import "./layouts/clients";
+@import "./layouts/footer";
+@import "./layouts/filter";
+@import "./layouts/portfolio-galery";

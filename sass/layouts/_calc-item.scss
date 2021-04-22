@@ -1,7 +1,8 @@
 .flexbox,
 .clients,
 .grid {
-  @include flex-wrap(flex);
+  display: flex;
+  flex-wrap: wrap;
 }
 /*--сетка на 3 елем.--*/
 .flexbox__item {
@@ -14,10 +15,10 @@
   margin-right: 0px;
 }
 
-.flexbox__item--team {
-  box-shadow: $box-shadow;
+.flexbox__item--border {
+  box-shadow: var(--box-shadow);
   border-radius: 0px 0px 4px 4px;
-  background-color: $white-color;
+  background-color: var(--white-color);
 }
 /*--сетка на 4 елем.--*/
 .grid__item {
@@ -25,7 +26,7 @@
   margin-right: 30px;
   margin-bottom: 30px;
 
-  background-color: $white-color;
+  background-color: var(--white-color);
 }
 
 .grid__item:nth-child(3n) {
@@ -36,6 +37,6 @@
   margin-bottom: 0px;
 }
 
-.grid__item--bg {
-  background-color: $white-color;
-}
+// .grid__item--bg {
+//   background-color: var(--white-color);
+// }

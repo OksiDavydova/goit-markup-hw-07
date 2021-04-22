@@ -7,8 +7,8 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   font-style: normal;
-  background-color: $bg-accent-color;
-  color: $white-color;
+  background-color: var(--bg-accent-color);
+  color: var(--white-color);
 
   &__container {
     display: flex;
@@ -24,13 +24,13 @@
     margin-right: 30px;
   }
 
-  &:nth-last-child(-n + 2) {
-    margin-top: 12px;
-  }
-
   &:last-child {
     width: calc(100% / 2);
     margin-left: auto;
+  }
+
+  &:nth-last-child(-n + 2) {
+    margin-top: 12px;
   }
 }
 
@@ -46,22 +46,22 @@
 
   border-width: 1px;
   border-style: solid;
-  border-color: $footer-border-email;
-  outline-color: $footer-border-email;
+  border-color: var(--footer-border-email);
+  outline-color: var(--footer-border-email);
   border-radius: 4px;
 
   min-width: 358px;
   font-size: 16px;
   line-height: 1.25;
-  transition: border-color $animation, outline-color $animation;
+  transition: border-color var(--animation), outline-color var(--animation);
 
   &:hover,
   &:focus {
-    border-color: $accent-color;
-    outline-color: $accent-color;
+    border-color: var(--accent-color);
+    outline-color: var(--accent-color);
   }
 
   &::placeholder {
-    color: $address--link-col;
+    color: var(--address--link-col);
   }
 }

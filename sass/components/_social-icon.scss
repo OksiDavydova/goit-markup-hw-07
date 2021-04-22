@@ -1,49 +1,55 @@
+/*-------------------социальные иконки----------------------*/
+
 .social {
-  @include flexCenter;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   min-width: 206px;
-}
 
-.social__item {
-  width: calc((100% - 30px) / 4);
-  margin-right: 10px;
-  height: 44px;
+  &__item {
+    width: calc((100% - 30px) / 4);
+    margin-right: 10px;
+    height: 44px;
+  }
 
-  &:nth-child(4n) {
+  &__item:nth-child(4n) {
     margin-right: 0;
   }
 }
 
 .social__link {
-  @include flexCenter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   border-radius: 50%;
 
-  background: $white-color;
-  transition: background-color $animation;
+  background: var(--white-color);
+  transition: background-color var(--animation);
 
   &--bg {
-    background-color: $footer-link-bg;
+    background-color: var(--footer-link-bg);
   }
 
   &:hover,
   &:focus {
-    background: $accent-color;
+    background: var(--accent-color);
   }
 }
 
 .social__icon {
   width: 20px;
   height: 20px;
-  fill: $base-icon-color;
-  transition: $animation;
+  fill: var(--base-icon-color);
+  transition: var(--animation);
 
   &--col-unchanged {
-    fill: $white-color;
+    fill: var(--white-color);
   }
 
   .social__link:hover &,
   .social__link:focus & {
-    fill: $white-color;
+    fill: var(--white-color);
   }
 }

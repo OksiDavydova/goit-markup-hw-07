@@ -1,0 +1,22 @@
+.competence {
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.71;
+    font-weight: 400;
+    color: var(--text-primery-color);
+  }
+
+  &__bg-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--headline-color-text);
+    min-height: 120px;
+    margin-bottom: 30px;
+  }
+}

@@ -9,10 +9,10 @@ html {
 }
 
 body {
-  font-family: $title-font;
+  font-family: var(--title-font);
   font-weight: 500;
   letter-spacing: 0.03em;
-  background-color: $white-color;
+  background-color: var(--white-color);
 }
 
 h1,
@@ -42,32 +42,9 @@ address {
   list-style: none;
 }
 
-/*-------------------ссылки-----------------*/
 .link {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-}
-
-.section__title {
-  margin-top: 0px;
-  margin-bottom: 50px;
-
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-}
-
-.heading {
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-
-  &__footer {
-    margin-bottom: 20px;
-  }
 }

@@ -1,0 +1,40 @@
+/*--кнопки-фильтры со страницы "portfolio"--*/
+.filter {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+
+  min-width: 611px;
+  margin-bottom: 50px;
+
+  &__item {
+    margin-right: 8px;
+  }
+
+  &__item:nth-child(5n) {
+    margin-right: 0px;
+  }
+}
+
+.filter__button {
+  border-style: none;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  color: var(--text-title-color);
+  background-color: var(--headline-color-text);
+  cursor: pointer;
+  padding: 6px 22px;
+  border-radius: 4px;
+  box-shadow: transparent;
+
+  transition: color var(--animation), background-color var(--animation), box-shadow var(--animation);
+
+  &:hover,
+  &:focus {
+    color: var(--white-color);
+    background-color: var(--accent-color);
+    box-shadow: var(--button-shadow);
+  }
+}

@@ -1,0 +1,36 @@
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &__bg {
+    background-color: var(--headline-color-text);
+  }
+
+  &--padding-bottom {
+    padding-bottom: 0;
+  }
+
+  &__title {
+    margin-top: 0px;
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+  }
+}
+
+/*--заголовки -*/
+
+.heading {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  &--margin {
+    margin-bottom: 20px;
+  }
+}

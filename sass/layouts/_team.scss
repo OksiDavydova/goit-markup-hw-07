@@ -1,0 +1,24 @@
+.team {
+  &__meta {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: inherit;
+  }
+
+  &__position {
+    margin-bottom: 16px;
+    color: var(--text-primery-color);
+  }
+}
