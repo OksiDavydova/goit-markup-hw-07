@@ -2,8 +2,8 @@
   padding-top: 94px;
   padding-bottom: 94px;
 
-  &__bg {
-    background-color: var(--headline-color-text);
+  &--bg {
+    background-color: var(--grey-color);
   }
 
   &--padding-bottom {
@@ -27,7 +27,7 @@
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14;
+  // line-height: 1.14;
   text-transform: uppercase;
 
   &--margin {

@@ -22,8 +22,8 @@
 
   &:hover,
   &:focus {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
+    color: var(--primery-accent-color);
+    border-color: var(--primery-accent-color);
     outline-color: currentColor;
   }
 }

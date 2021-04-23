@@ -1,11 +1,15 @@
-.clients__item {
-  width: calc((100% - 150px) / 6);
-  margin-right: 30px;
-  min-height: 90px;
-}
+.clients {
+  @include flex-wrap;
 
-.clients__item:nth-child(6n) {
-  margin-right: 0px;
+  &__item {
+    width: calc((100% - 150px) / 6);
+    margin-right: 30px;
+    min-height: 90px;
+  }
+
+  &__item:nth-child(6n) {
+    margin-right: 0px;
+  }
 }
 
 .clients__link {
@@ -21,20 +25,22 @@
   color: var(--base-icon-color);
   border-color: var(--base-icon-color);
 
-  transition: border-color var(--animation);
+  @include transition(border-color);
+  //transition: border-color var(--animation);
 
   &:hover,
   &:focus {
-    border-color: var(--accent-color);
+    border-color: var(--primery-accent-color);
   }
 }
 
 .clients__icon {
   fill: currentColor;
-  transition: fill var(--animation);
+  @include transition(fill);
+  //transition: fill var(--animation);
 
   .clients__link:hover &,
   .clients__link:focus & {
-    fill: var(--accent-color);
+    fill: var(--primery-accent-color);
   }
 }

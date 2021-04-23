@@ -23,18 +23,21 @@
   font-size: 16px;
   line-height: 1.62;
   color: var(--text-title-color);
-  background-color: var(--headline-color-text);
+  background-color: var(--grey-color);
   cursor: pointer;
   padding: 6px 22px;
   border-radius: 4px;
   box-shadow: transparent;
 
-  transition: color var(--animation), background-color var(--animation), box-shadow var(--animation);
+  @include transition(color);
+  @include transition(background-color);
+  @include transition(box-shadow);
+  //transition: color var(--animation), background-color var(--animation), box-shadow var(--animation);
 
   &:hover,
   &:focus {
     color: var(--white-color);
-    background-color: var(--accent-color);
+    background-color: var(--primery-accent-color);
     box-shadow: var(--button-shadow);
   }
 }

@@ -3,7 +3,8 @@
   flex-direction: column;
 
   box-shadow: none;
-  transition: box-shadow var(--animation);
+  @include transition(box-shadow);
+  // transition: box-shadow var(--animation);
 
   &:hover,
   &:focus {
@@ -57,10 +58,11 @@
   line-height: 1.55;
   letter-spacing: 0.03em;
   color: var(--white-color);
-  background-color: var(--card-overlay-bg-color);
+  background-color: var(--card-bg-overlay-color);
 
   transform: translateY(103%);
-  transition: transform var(--animation);
+  @include transition(transform);
+  // transition:  var(--animation);
 
   .product__link:hover &,
   .product__link:focus & {

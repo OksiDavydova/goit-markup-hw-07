@@ -1,14 +1,15 @@
+@import "./vendors.scss/modern-norm";
 @import "./vendors.scss/visually-hidden";
 @import "./utils/variables";
 @import "./utils/mixins";
-
+@import "./base/fonts";
 @import "./base/common";
 @import "./base/container";
 
 @import "./components/header";
 @import "./components/logo";
 @import "./components/menu";
-@import "./components/contacts";
+@import "./components/contact";
 @import "./components/button";
 @import "./components/backdrop";
 @import "./components/modal-button";
