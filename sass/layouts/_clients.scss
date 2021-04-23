@@ -1,14 +1,8 @@
 .clients {
-  @include flex-wrap;
+  --grid-num: 6;
 
   &__item {
-    width: calc((100% - 150px) / 6);
-    margin-right: 30px;
     min-height: 90px;
-  }
-
-  &__item:nth-child(6n) {
-    margin-right: 0px;
   }
 }
 
@@ -26,7 +20,6 @@
   border-color: var(--base-icon-color);
 
   @include transition(border-color);
-  //transition: border-color var(--animation);
 
   &:hover,
   &:focus {
@@ -37,7 +30,6 @@
 .clients__icon {
   fill: currentColor;
   @include transition(fill);
-  //transition: fill var(--animation);
 
   .clients__link:hover &,
   .clients__link:focus & {
