@@ -11,7 +11,9 @@
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+
   letter-spacing: 0.02em;
+
   color: var(--text-title-color);
   transition: color var(--animation);
 
@@ -24,7 +26,7 @@
     content: "";
     position: absolute;
     display: block;
-    height: 4px;
+    height: 3px;
     width: 100%;
     border-radius: 2px;
     bottom: -1px;
@@ -43,16 +45,11 @@
   color: var(--primery-accent-color);
   transition: color var(--animation);
 
-  &:hover,
-  &:focus {
-    color: var(--secondary-accent-col);
-  }
   &::after {
-    content: "";
     background-color: var(--primery-accent-color);
-    bottom: -1px;
   }
-
+  &:hover,
+  &:focus,
   &:hover::after,
   &:focus::after {
     color: var(--secondary-accent-col);

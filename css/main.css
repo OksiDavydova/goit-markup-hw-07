@@ -490,7 +490,7 @@ address {
   content: "";
   position: absolute;
   display: block;
-  height: 4px;
+  height: 3px;
   width: 100%;
   border-radius: 2px;
   bottom: -1px;
@@ -507,17 +507,11 @@ address {
   transition: color var(--animation);
 }
 
-.menu__link--current:hover, .menu__link--current:focus {
-  color: var(--secondary-accent-col);
-}
-
 .menu__link--current::after {
-  content: "";
   background-color: var(--primery-accent-color);
-  bottom: -1px;
 }
 
-.menu__link--current:hover::after, .menu__link--current:focus::after {
+.menu__link--current:hover, .menu__link--current:focus, .menu__link--current:hover::after, .menu__link--current:focus::after {
   color: var(--secondary-accent-col);
 }
 
@@ -1074,6 +1068,10 @@ address {
   letter-spacing: 0.03em;
   padding: 0;
   color: var(--address--link-col);
+}
+
+.footer__contact-link:first-child {
+  color: var(--white-color);
 }
 
 .footer__contact-link:not(:last-child) {

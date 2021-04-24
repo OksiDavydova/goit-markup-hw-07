@@ -18,6 +18,10 @@
     padding: 0;
     color: var(--address--link-col);
 
+    &:first-child {
+      color: var(--white-color);
+    }
+
     &:not(:last-child) {
       margin-bottom: 9px;
     }
